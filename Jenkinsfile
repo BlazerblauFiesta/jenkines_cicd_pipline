@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'Version', defaultVlaue: '1.0.3' , description: 'Version Value')
+        string(name: 'Version', defaultValue: '1.0.3' , description: 'Version Value')
     
     }
     environment {
