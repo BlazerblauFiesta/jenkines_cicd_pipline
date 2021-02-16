@@ -1,7 +1,13 @@
 pipeline {
     
     agent any
+    tools {
+        maven 'Maven'
+    }
+    parameters {
+        string(name: 'Version', defaultVlaue: '1.0.3' , description: 'Version Value')
     
+    }
     environment {
         NEW_VERSION = '1.3.0'
     }
@@ -25,6 +31,7 @@ pipeline {
         stage ('Deply'){
             steps {
                 sh 'echo "Deploying the Applications... "'
+                sh 'echo "Deploying Version is ${params.Version}"'
 
             }
         }
