@@ -37,26 +37,26 @@ pipeline {
             }
         }
     }
-    post{
+//    post{
         // Execute Some Logic After all Stages excetted
-        always{
+//        always{
             // Always Exexuted in all conditions
-                steps {
-                sh 'echo "Some Checking Steps... "'
+//                steps {
+//                sh 'echo "Some Checking Steps... "'
 
-            }
-        }
-        success {
-                            steps {
-                sh 'echo "Build Success... "'
+//            }
+//        }
+//        success {
+//                            steps {
+//                sh 'echo "Build Success... "'
 
-            }
-        }
-        failure{
-                                        steps {
-                sh 'echo "Build Failed... "'
+//            }
+//        }
+//        failure{
+//                                        steps {
+//                sh 'echo "Build Failed... "'
 
-            }
-        }
-    }
+//            }
+//        }
+//    }
 }
