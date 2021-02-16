@@ -1,3 +1,5 @@
+def gv = load "script.groovy"
+
 pipeline {
     
     agent any
@@ -11,6 +13,13 @@ pipeline {
     }
     
     stages {
+        stage('Init') {
+            steps {
+                script{
+                    gv.function()
+                }
+            }
+        }
         stage('Build') {
             steps {
                 sh 'echo "Building the Application... "'
