@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"'
+                sh 'echo "Building the Application... "'
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
@@ -14,19 +14,19 @@ pipeline {
         }
         stage ('Test'){
             steps {
-                sh 'echo "Hello World"'
+                sh 'echo "Testing the Applications... "'
 
             }
         }
         stage ('Deply'){
             steps {
-                sh 'echo "Hello World"'
+                sh 'echo "Deploying the Applications... "'
 
             }
         }
         stage ('Clean'){
             steps {
-                sh 'echo "Hello World"'
+                sh 'echo "Cleaning the Application... "'
 
             }
         }
