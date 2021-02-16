@@ -2,10 +2,15 @@ pipeline {
     
     agent any
     
+    enviroment {
+        NEW_VERSION = ‘1.3.0‘
+    }
+    
     stages {
         stage('Build') {
             steps {
                 sh 'echo "Building the Application... "'
+                sh 'echo "Building Version is ${NEW_VERSION}"'
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
