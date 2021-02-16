@@ -1,5 +1,3 @@
-def gv = load "script.groovy"
-
 pipeline {
     
     agent any
@@ -16,6 +14,7 @@ pipeline {
         stage('Init') {
             steps {
                 script{
+                    gv = load "script.groovy"
                     gv.function()
                 }
             }
