@@ -1,9 +1,7 @@
 pipeline {
     
     agent any
-    tools {
-        maven 'Maven'
-    }
+
     parameters {
         string(name: 'Version', defaultVlaue: '1.0.3' , description: 'Version Value')
     
