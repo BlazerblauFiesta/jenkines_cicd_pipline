@@ -41,10 +41,22 @@ pipeline {
         // Execute Some Logic After all Stages excetted
         always{
             // Always Exexuted in all conditions
+                steps {
+                sh 'echo "Some Checking Steps... "'
+
+            }
         }
         success {
+                            steps {
+                sh 'echo "Build Success... "'
+
+            }
         }
         failure{
+                                        steps {
+                sh 'echo "Build Failed... "'
+
+            }
         }
     }
 }
